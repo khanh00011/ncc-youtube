@@ -56,8 +56,10 @@
         margin-right: 0 !important;
     }
     .content-yt{
-         overflow-y: unset !important;
-         height: unset !important;
+        flex-basis: 100% !important;
+    }
+    .crossbar{
+        top: 44px !important;
     }
     .compact-yt > ul{
         position: fixed;

@@ -16,6 +16,14 @@ ul{
    max-width: auto;
    background: #fff;
 }
+header.site-header{
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    
+}
 .main-header{
     display: flex;
     justify-content: space-between;
@@ -269,6 +277,7 @@ ul{
 .main-content{
     display: flex;
     margin-top: 20px;
+    justify-content: end;
 }
 
 .sidebar-yt::-webkit-scrollbar{
@@ -291,21 +300,31 @@ body {
     overflow-y: scroll; 
   }
 body::-webkit-scrollbar {
-    display: none; /* cho Chrome, Safari, and Opera */
+     width: 8px;
 }
-.content-yt::-webkit-scrollbar{
+body::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+/* .content-yt::-webkit-scrollbar{
     width: 8px;
 }
 .content-yt::-webkit-scrollbar-thumb{
     background-color: #888;
     border-radius: 10px;
-}
+} */
 .sidebar-yt{
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
     max-width: 16.1%;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     /* min-height: 450px; */
     overflow-y: scroll;
+    background: #fff;
+    padding-left: 16px;
 }
 ul.sbar-yt.chanel-yt h2{
     font-size: 16px;
@@ -397,14 +416,12 @@ ul.home-yt.sbar-yt{
     color: #555;
 }
 .content-yt{
+    padding-top: 111px;
     padding-left: 30px;
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    margin-right: -16px;
+    flex-basis: calc(100% - 16.1%);
 }
 .row-ct{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .avt-and-tl{
     display: flex;
@@ -461,7 +478,8 @@ ul.home-yt.sbar-yt{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-right: 16px;
+    /* margin-right: 16px; */
+    margin-left: 16px;
 }
 .box-vd{
     flex-basis: calc( (100% - 50px ) / 4);
@@ -475,6 +493,11 @@ ul.home-yt.sbar-yt{
 .show-compact .compact-yt{
     display: block;
     width:5%;
+    /* padding-top: 56px; */
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    top: 56px;
 }
 .compact-yt ul li{
     list-style-type: none;
@@ -491,4 +514,14 @@ ul.home-yt.sbar-yt{
 .compact-yt ul li a i{
     font-size: 16px;
     line-height: 28px;
+}
+.crossbar{
+    position: fixed;
+    top: 54px;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #fff;
+}
+.main-content.show-compact .content-yt{
+    flex-basis: 95%;
 }
