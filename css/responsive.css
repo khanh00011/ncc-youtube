@@ -1,0 +1,94 @@
+@media only screen and (max-width : 1640px){
+    .img-box img{
+        max-height: 166px !important;
+    }
+}
+@media only screen and (max-width : 1440px){
+    .crossbar{
+        max-width: 1170px; 
+        overflow-x: scroll;
+    }
+    .crossbar::-webkit-scrollbar{
+        display: none;
+    }
+    .crossbar ul {
+       
+        width: 1200px;
+    }
+
+}
+@media only screen and (max-width : 1024px) {
+    .bars,
+    div#show_tab,
+    .mic{
+        display: none;
+    }
+    .end-hd-yt{
+        padding-right: 0px !important;
+    }
+    .main-header{
+        height: 40px !important;
+        padding: 4px 0;
+        /* margin-top: 10px; */
+    }
+    .logo-yt::after{
+        display: none;
+    }
+    .sidebar-yt{
+        display: none;
+    }
+    .content-yt{
+        padding-left: 0 !important;
+    }
+    .content-yt::-webkit-scrollbar{
+        display: none;
+    }
+    .center-yt{
+        margin-left: 25px;
+    }
+    .compact-yt{
+        display: block !important;
+    }
+    .center-yt input{
+        height: 30px !important;
+    }
+    .row-ct{
+        margin-right: 0 !important;
+    }
+    .content-yt{
+         overflow-y: unset !important;
+         height: unset !important;
+    }
+    .compact-yt > ul{
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: #FFF;
+        border-top: 0.5px solid #888;
+        left: 0;
+    }
+    .compact-yt ul li a{
+        padding: 0 !important;
+    }
+    .box-vd{
+        flex-basis: calc((100% - 40px ) / 3 ) !important;
+    }
+}
+@media only screen and ( max-width: 768px) {
+    .box-vd{
+        flex-basis: calc((100% - 30px ) / 2) !important;
+    }
+}
+@media only screen and ( max-width: 426px){
+    .row-ct{
+        display: block !important;
+    }
+    .box-vd{
+        margin-bottom: 30px !important;
+    }
+    .row-ct{
+        padding-bottom: 50px;
+    }
+}

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="site-header">
+            <div class="container">
+                <div class="main-header">
+                    <div class="start-hd-yt">
+                        <div class="bars">
+                            <button onclick="showCompact()">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="logo-yt">
+                            <a href="#"> <img src="images/logo-yt.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="center-yt">
+                       <form action="#">
+                            <div class="search-gr">
+                                <input type="text" placeholder="Tìm Kiếm">
+                                <div class="submit">
+                                    <button><i class="fas fa-search"></i></button>
+                                </div>
+                                <div class="mic">
+                                   <a href="#"> <i class="fas fa-microphone"></i></a>
+                                </div>
+                            </div> 
+                       </form>
+                    </div>
+                    <div class="end-hd-yt">
+                        <div class="icon-yt" id="show_tab">
+                            <a href="#" title="tạo" onclick="showBell('show_update')"><i class="fas fa-video"></i></a>
+                                <div class="update-vd">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Tải video lên</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">phát trực tiếp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            <a href="#" id="id-bell" title="thông báo" onclick="showBell('show_bell')"><i class="far fa-bell"></i></a>
+                            <div class="show--bell">
+                                <div class="top--bell">
+                                    <div class="title-bell">
+                                        Thông báo
+                                    </div>
+                                    <a href="#"><i class="fas fa-cog"></i></a>
+                                </div>
+                                <div class="display-tb">
+                                    <h4>Thông báo của bạn hiển thị ở đây</h4>
+                                    <p>Đăng ký kênh yêu thích của bạn để nhận <br> thông báo về các video mới nhất.</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="user-avt" id="mysef">
+                            <a href="#" onclick="showHideMysef()">k</a>
+                            <div class="show_mysef">
+                                <div class="top-mysef">
+                                    <div class="avatar-ms">
+                                        <div class="img-avt-ms">
+                                            k
+                                        </div>
+                                    </div>
+                                    <div class="name-mysef">
+                                        <div class="name">
+                                            HoangPhiKhanh
+                                        </div>
+                                        <div class="n-mail">
+                                            khanh.hoangphi@ncc.asia
+                                        </div>
+                                        <a href="#">Quản lí tài khoản của bạn</a>
+                                    </div>
+                                </div>
+                                <ul class="">
+                                    <li><a href="#"><i class="far fa-id-badge"></i> Tạo kênh</a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i> Youtube studio</a></li>
+                                    <li><a href="#"><i class="fas fa-address-book"></i> Chuyển đổi tài khoản</a></li>
+                                    <li><a href="#"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-dollar-sign"></i> giao dịch và gói thành viên</a></li>
+                                    <li><a href="#"><i class="fas fa-user-shield"></i> dữ liệu của bạn trong Youtube</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="site-main">
+            <div class="container">
+                <div class="main-content" id="id-main">
+                    <div class="compact-yt">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-home"></i> <br> Trang chủ</a></li>
+                            <li><a href="#"><i class="fas fa-home"></i> <br> Shorts</a></li>
+                            <li><a href="#"><i class="fas fa-home"></i> <br> Kênh đăng kí</a></li>
+                            <li><a href="#"><i class="fas fa-home"></i> <br> Thư viện</a></li>
+                        </ul>
+                    </div> 
+                    <div class="sidebar-yt">
+                        <ul class="home-yt sbar-yt">
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                        Trang chủ
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                        Shorts
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                       Kênh đăng ký
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="sbar-yt">
+                            <li class="active">
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                        Shorts
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                       Lịch sử đã xem
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                      Xem sau
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-photo-video"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                        thư viện
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="far fa-thumbs-up"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                       video đã thích
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="sbar-yt chanel-yt">
+                            <h2>Kênh đăng ký</h2>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon avt">
+                                        <img src="images/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="text-ct">
+                                        kênh đăng kí
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon avt">
+                                        <img src="images/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="text-ct">
+                                        Vietnam Championship Series - LMHT
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon avt">
+                                        <img src="images/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="text-ct">
+                                        kênh đăng kí
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon avt">
+                                        <img src="images/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="text-ct">
+                                        kênh đăng kí
+                                    </div>
+                                </div>
+                            </li>                           
+                             <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon avt">
+                                        <img src="images/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="text-ct">
+                                        kênh đăng kí
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-ct-ic">
+                                    <div class="icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="text-ct">
+                                        Hiển thị thêm 30 mục mới
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="content-yt">
+                        <div class="crossbar">
+                            <ul>
+                                <li class="active"><a href="#" title="tất cả">Tất cả</a></li>
+                                <li><a href="#" title="Trực tiếp">Trực tiếp</a></li>
+                                <li><a href="#" title="Âm nhạc">Âm nhạc</a></li>
+                                <li><a href="#" title="Danh sách kết hợp">Danh sách kết hợp</a></li>
+                                <li><a href="#">Trò chơi </a></li>
+                                <li><a href="#">Bóng chuyền</a></li>
+                                <li><a href="#">Du lịch</a></li>
+                                <li><a href="#">Nông nghiệp</a></li>
+                                <li><a href="#">Toán học </a></li>
+                                <li><a href="#">Bóng đá</a></li>
+                                <!-- <li><a href="#">Hoạt hình</a></li> -->
+                            </ul>
+                        </div>
+                        <div class="row-ct">
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="Font Awesome is the internet's icon library and toolkit">
+                                            <h3>Font Awesome is the internet's icon library and toolkit.Font Awesome is the internet's icon library and toolkit </h3>
+                                        </a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>                            
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>                            
+                            <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>    
+                        </div>                           
+                         <div class="box-vd">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="images/images-mp3.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="avt-and-tl">
+                                    <div class="avatar-author">
+                                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                    </div>
+                                    <div class="text-lq">
+                                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                        <div class="author-vd">
+                                            <span>review</span>
+                                        </div>
+                                        <div class="view--time">
+                                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                        </div>
+                        <div class="box-vd">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="images/images-mp3.jpg" alt="">
+                                </div>
+                            </a>
+                            <div class="avt-and-tl">
+                                <div class="avatar-author">
+                                    <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                                </div>
+                                <div class="text-lq">
+                                    <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                    <div class="author-vd">
+                                        <span>review</span>
+                                    </div>
+                                    <div class="view--time">
+                                        <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                    </div>                         
+                    <div class="box-vd">
+                        <a href="#">
+                            <div class="img-box">
+                                <img src="images/images-mp3.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="avt-and-tl">
+                            <div class="avatar-author">
+                                <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                            </div>
+                            <div class="text-lq">
+                                <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                                <div class="author-vd">
+                                    <span>review</span>
+                                </div>
+                                <div class="view--time">
+                                    <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                </div>
+                <div class="box-vd">
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="images/images-mp3.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="avt-and-tl">
+                        <div class="avatar-author">
+                            <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                        </div>
+                        <div class="text-lq">
+                            <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                            <div class="author-vd">
+                                <span>review</span>
+                            </div>
+                            <div class="view--time">
+                                <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+            <div class="box-vd">
+                <a href="#">
+                    <div class="img-box">
+                        <img src="images/images-mp3.jpg" alt="">
+                    </div>
+                </a>
+                <div class="avt-and-tl">
+                    <div class="avatar-author">
+                        <a href="#"><img src="images/img_avatar.png" alt=""></a>
+                    </div>
+                    <div class="text-lq">
+                        <a href="#" title="video bóng đá"><h3>video bóng đá</h3></a>
+                        <div class="author-vd">
+                            <span>review</span>
+                        </div>
+                        <div class="view--time">
+                            <span>1tr lượt xem</span> <span class="time-qk"> 8 tháng trước</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
